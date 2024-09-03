@@ -1,0 +1,391 @@
+/* Generalna stilizacija */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    animation: fadeInBody 1.5s ease-in forwards;
+}
+/* Gornja traka sa kontakt informacijama */
+
+.top-bar {
+    background-color: #ff0000; /* Crvena boja pozadine trake */
+    color: #fff; /* Boja teksta */
+    padding: 10px 20px; /* Unutrašnji razmak */
+    display: flex;
+    justify-content: flex-end; /* Razmak između informacija */
+    align-items: center;
+    font-size: 16px; /* Veličina teksta u traci */
+    position: relative;
+    height: 10px; /* Prilagodite visinu trake po potrebi */
+}
+
+.info-content {
+    display: flex;
+    align-items: center;
+    gap: 0px; /* Razmak između broja telefona i adrese */
+}
+
+.phone-number, .address {
+    margin: 20px;
+}
+
+.contact-info span {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Razmak između logotipa i navigacije */
+}
+
+.logo {
+    height: 100px; /* Prilagodite visinu logotipa po potrebi */
+}
+.brand-text {
+    color: #fff;
+    font-size: 50px; /* Povećajte font za izražajniji izgled */
+    font-weight: bold;
+}
+
+/* Navigacija */
+nav {
+    background-color: #b1ada2;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Pomeri sve elemente u navigaciji ulevo */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px; /* Povećaj veličinu teksta u navigaciji */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a66402; /* Promena boje teksta pri prelasku mišem */
+}
+
+/* Dugmad za prevod */
+.language-switcher {
+    display: flex;
+    align-items: center;
+    margin-left: 0px; /* Razmak između navigacionih dugmadi i dugmadi za prevod */
+}
+
+.lang-button {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 5px;
+    position: relative;
+}
+
+.lang-button img {
+    width: 24px; /* Prilagodite veličinu zastava po potrebi */
+    height: 16px;
+    border-radius: 4px;
+}
+
+.lang-button:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 14px;
+    margin-top: 5px;
+}
+/* Sekcije */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+.home-section {
+    position: relative;
+    overflow: hidden;
+    height: 50vh; /* Postavite visinu sekcije na 70% visine pregledača */
+}
+
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Da bi se sadržaj bio iznad slideshow-a */
+}
+
+.slide {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Dodajte fleksboks za centriranje sadržaja */
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Centriranje teksta unutar tekstualnog okvira */
+}
+/* Osnovni stilovi za home sekciju */
+#home {
+    position: relative;
+    overflow: hidden;
+    height: 50vh; /* Visina ceo ekran */
+}
+
+#home .slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#home .slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pokriva ceo prostor */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#home .slideshow img.active {
+    opacity: 1;
+}
+
+#home .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+#home .text h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#home .text p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Usluge */
+#services {
+    background-color: #fff;
+    color: #333;
+}
+
+.service {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.portfolio-item {
+    width: 22%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: inherit;
+}
+/* O Nama */
+#about {
+    background: url('5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    padding: 100px 20px;
+}
+
+/* Kontakt */
+/* Kontakt sekcija */
+.contact-section {
+    padding: 50px 20px;
+    background: url('1.jpg') no-repeat center center/cover; /* Pozadinska slika */
+    background-size: cover;
+    color: #ccc;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px; /* Maksimalna širina ako želite */
+    margin: 0 auto; /* Centriranje sadržaja */
+}
+
+.map-container iframe {
+    border: none;
+    border-radius: 8px;
+    max-width: 100%;
+    width: 100%;
+    height: 300px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+.contact-info i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #333;
+}
+
+.contact-info a {
+    color: #e31219;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px; /* Razmak između dugmadi */
+    justify-content: center; /* Centriranje dugmadi */
+    margin-top: 20px;
+}
+
+.social-button img {
+    width: 40px; /* Prilagodi veličinu ikone po potrebi */
+    height: 40px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.social-button img:hover {
+    opacity: 0.8; /* Efekat prelaska mišem na dugme */
+}
+
+.map-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Razmak iznad mape */
+    margin-right: 10px; /* Razmak s desne strane mape */
+}
+
+/* Osnovni stilovi za stranice sa uslugama */
+.service-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.service-page h1 {
+    font-size: 3em; /* Povećan naslov */
+    font-weight: bold; /* Boldovan naslov */
+    margin-bottom: 20px;
+}
+
+.service-page p {
+    font-size: 1.2em; /* Povećan propratni tekst */
+    font-weight: bold; /* Boldovan tekst */
+    margin-bottom: 20px;
+}
+
+.service-page .image-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-page .image-row img {
+    width: calc(50% - 10px); /* Slike zauzimaju 50% širine i imaju razmak */
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}

@@ -1,0 +1,159 @@
+/* Gornja traka sa kontakt informacijama */
+.top-bar {
+    background-color: #ff0000; /* Crvena boja pozadine trake */
+    color: #fff; /* Boja teksta */
+    padding: 10px 20px; /* Unutrašnji razmak */
+    display: flex;
+    justify-content: flex-end; /* Razmak između informacija */
+    align-items: center;
+    font-size: 16px; /* Veličina teksta u traci */
+    position: relative;
+    height: 10px; /* Prilagodite visinu trake po potrebi */
+}
+
+.info-content {
+    display: flex;
+    align-items: center;
+    gap: 0px; /* Razmak između broja telefona i adrese */
+}
+
+.phone-number, .address {
+    margin: 20px;
+}
+
+.contact-info span {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Razmak između logotipa i navigacije */
+}
+
+.logo {
+    height: 100px; /* Prilagodite visinu logotipa po potrebi */
+}
+
+.brand-text {
+    color: #fff;
+    font-size: 50px; /* Povećajte font za izražajniji izgled */
+    font-weight: bold;
+}
+
+/* Navigacija */
+nav {
+    background-color: #b1ada2;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Pomeri sve elemente u navigaciji ulevo */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px; /* Povećaj veličinu teksta u navigaciji */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a66402; /* Promena boje teksta pri prelasku mišem */
+}
+
+/* Dugmad za prevod */
+.language-switcher {
+    display: flex;
+    align-items: center;
+    margin-left: 0px; /* Razmak između navigacionih dugmadi i dugmadi za prevod */
+}
+
+.lang-button {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 5px;
+    position: relative;
+}
+
+.lang-button img {
+    width: 24px; /* Prilagodite veličinu zastava po potrebi */
+    height: 16px;
+    border-radius: 4px;
+}
+
+.lang-button:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+
+/* Osnovni stil za sav tekst na stranicama */
+body {
+    font-size: 18px; /* Povećaj osnovnu veličinu fonta */
+    line-height: 1.6; /* Povećaj razmak između redova za bolju čitljivost */
+}
+
+/* Stilovi za naslove */
+h1 {
+    font-size: 3.5em; /* Povećan naslov na stranicama sa uslugama */
+    font-weight: bold;
+    margin-bottom: 25px; /* Povećaj razmak ispod naslova */
+}
+
+h2 {
+    font-size: 2.5em; /* Povećan podnaslov */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 2em; /* Povećan naslov trećeg nivoa */
+    margin-bottom: 15px;
+}
+
+/* Stilovi za paragraf tekst */
+p {
+    font-size: 1.5em; /* Povećaj veličinu teksta u paragrafima */
+    margin-bottom: 25px; /* Povećaj razmak ispod paragrafa */
+}
+
+/* Stil za listu */
+ul, ol {
+    font-size: 1.3em; /* Povećaj veličinu teksta u listama */
+    margin-bottom: 20px; /* Povećaj razmak ispod lista */
+}
+
+/* Stil za linkove */
+a {
+    font-size: 1.2em; /* Povećaj veličinu teksta za linkove */
+}
+
+/* Povećaj veličinu teksta unutar sekcija specifičnih za usluge */
+.service-page p {
+    font-size: 1.7em; /* Još veći font za tekst u sekcijama sa uslugama */
+    font-weight: normal; /* Ukloni boldovanje ako je ranije dodato */
+}
